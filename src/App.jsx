@@ -1,9 +1,14 @@
 import "./App.css";
+import Main from "./components/Main";
+import Sidebar from "./components/Sidebar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Sidebar />
+      <Main />
+    </div>
+  );
 }
 
 export default App;
