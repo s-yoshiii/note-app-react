@@ -1,0 +1,39 @@
+.sidebar {
+    width: 30%;
+    height: 100vh;
+    border-right: 1px solid #ddd;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+.notes {
+    height: calc(100vh - 78px);
+    overflow: scroll;
+    transition: .3s ease;
+}
+
+.item {
+    padding: 25px;
+    cursor: pointer;
+}
+
+.item:hover {
+    background: #f1f0f0;
+}
+
+.item p {
+    margin: 10px 0;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+}

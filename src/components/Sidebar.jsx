@@ -4,9 +4,9 @@ import styles from "./Sidebar.module.css";
 const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
-      <div className="header">
+      <div className={styles.header}>
         <h1>ノート</h1>
-        <button>追加</button>
+        <button className={styles.addbtn}>追加</button>
       </div>
       <div className={styles.notes}>
         <div className={styles.item}>
