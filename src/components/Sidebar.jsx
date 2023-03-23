@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = () => {
+const Sidebar = ({ onAddNote }) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
         <h1>ノート</h1>
-        <button className={styles.addbtn}>追加</button>
+        <button onClick={onAddNote} className={styles.addbtn}>
+          追加
+        </button>
       </div>
       <div className={styles.notes}>
         <div className={styles.item}>
