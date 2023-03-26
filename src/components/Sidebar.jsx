@@ -12,7 +12,7 @@ const Sidebar = ({ onAddNote, notes }) => {
       </div>
       <div className={styles.notes}>
         {notes.map((note) => (
-          <div className={styles.item}>
+          <div className={styles.item} key={note.id}>
             <div className={styles.title}>
               <strong>{note.title}</strong>
               <button>削除</button>
