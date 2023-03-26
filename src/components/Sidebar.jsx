@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = ({ onAddNote, notes }) => {
+const Sidebar = ({ onAddNote, notes, onDeleteNote }) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
@@ -15,7 +15,7 @@ const Sidebar = ({ onAddNote, notes }) => {
           <div className={styles.item} key={note.id}>
             <div className={styles.title}>
               <strong>{note.title}</strong>
-              <button>削除</button>
+              <button onClick={() => onDeleteNote(note.id)}>削除</button>
             </div>
             <p>{note.content}</p>
             <small>
