@@ -1,18 +1,28 @@
 import React from "react";
 import styles from "./Sidebar.module.css";
 
-const Sidebar = ({ onAddNote, notes, onDeleteNote }) => {
+const Sidebar = ({
+  onAddNote,
+  notes,
+  onDeleteNote,
+  activeNote,
+  setActiveNote,
+}) => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.header}>
         <h1>ノート</h1>
-        <button onClick={onAddNote} className={styles.addbtn}>
-          追加
-        </button>
+        <button onClick={onAddNote}>追加</button>
       </div>
       <div className={styles.notes}>
         {notes.map((note) => (
-          <div className={styles.item} key={note.id}>
+          <div
+            className={`${styles.item} ${
+              note.id === activeNote && styles.active
+            }`}
+            key={note.id}
+            onClick={() => setActiveNote(note.id)}
+          >
             <div className={styles.title}>
               <strong>{note.title}</strong>
               <button onClick={() => onDeleteNote(note.id)}>削除</button>

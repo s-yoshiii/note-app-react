@@ -25,7 +25,8 @@
     cursor: pointer;
 }
 
-.item:hover {
+.item:hover,
+.item.active {
     background: #c2c2c2;
 }
 
