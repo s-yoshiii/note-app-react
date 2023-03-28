@@ -1,9 +1,42 @@
-.main {}
+.main {
+    width: 70%;
+    height: 100vh;
+}
 
-.edit {}
+.edit {
+    height: 50vh;
+    padding: 25px;
+}
 
-.preview {}
+.edit input,
+textarea {
+    display: block;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    width: 100%;
+    height: calc(50vh - 130px);
+    padding: 5px;
+    resize: none;
+    font-size: 16px;
+}
 
-.title {}
+.edit input {
+    height: 50px;
+    font-size: 2rem;
+}
 
-.markdown {}
+.preview {
+    height: 50vh;
+    border-top: 1px solid #ddd;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, .04);
+}
+
+.title {
+    padding: 24px 24px 0 25px;
+}
+
+.markdown {
+    padding: 0 25px 25px 25px;
+    line-height: 2rem;
+}
