@@ -8,7 +8,6 @@ function App() {
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(false);
   const onAddNote = () => {
-    console.log("new note");
     const newNote = {
       id: uuid(),
       title: "新しいノート",
