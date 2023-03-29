@@ -1,7 +1,10 @@
 import React from "react";
 import styles from "./Main.module.css";
 
-const Main = () => {
+const Main = ({ activeNote }) => {
+  if (!activeNote) {
+    return <p className={styles.noActive}>ノートが選択されていません</p>;
+  }
   return (
     <div className={styles.main}>
       <div className={styles.edit}>
@@ -14,8 +17,8 @@ const Main = () => {
         ></textarea>
       </div>
       <div className={styles.preview}>
-        <h1 className={styles.title}>タイトル</h1>
-        <div className={styles.markdown}>ノート内容</div>
+        <h1 className={styles.title}>{activeNote.title}</h1>
+        <div className={styles.markdown}>{activeNote.content}</div>
       </div>
     </div>
   );

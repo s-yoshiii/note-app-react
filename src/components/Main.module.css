@@ -40,3 +40,13 @@ textarea {
     padding: 0 25px 25px 25px;
     line-height: 2rem;
 }
+
+.noActive {
+    width: 70%;
+    height: 100vh;
+    font-size: 2rem;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
