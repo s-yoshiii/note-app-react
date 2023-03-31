@@ -25,6 +25,7 @@ function App() {
       return note.id === activeNote;
     });
   };
+  const onUpdateNote = () => {};
   return (
     <div className="App">
       <Sidebar
