@@ -1,8 +1,14 @@
 import React from "react";
 import styles from "./Main.module.css";
 
-const Main = ({ activeNote }) => {
-  const onEditNote = () => {};
+const Main = ({ activeNote, onUpdateNote }) => {
+  const onEditNote = (key, value) => {
+    onUpdateNote({
+      ...activeNote,
+      [key]: value,
+      modDate: Date.now(),
+    });
+  };
   if (!activeNote) {
     return <p className={styles.noActive}>ノートが選択されていません</p>;
   }
