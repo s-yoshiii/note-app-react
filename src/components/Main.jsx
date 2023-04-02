@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Main.module.css";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 const Main = ({ activeNote, onUpdateNote }) => {
   const onEditNote = (key, value) => {
@@ -32,7 +33,9 @@ const Main = ({ activeNote, onUpdateNote }) => {
       </div>
       <div className={styles.preview}>
         <h1 className={styles.title}>{activeNote.title}</h1>
-        <div className={styles.markdown}>{activeNote.content}</div>
+        <ReactMarkdown className={styles.markdown}>
+          {activeNote.content}
+        </ReactMarkdown>
       </div>
     </div>
   );
